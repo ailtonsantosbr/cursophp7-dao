@@ -12,7 +12,6 @@ $stmt->bindParam(":PASSWORD", $password);
 
 $stmt->execute();
 
-echo "Dados Inserido OK!!";
-
-
+echo "Dados Inserido com sucesso, OK!!";
+echo "Ailton viadinho rs";kk
 ?>

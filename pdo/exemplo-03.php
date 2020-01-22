@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 $conn = new PDO("mysql:host=localhost; dbname=dbphp7", "root", "root");
 
@@ -12,6 +12,18 @@ $stmt->bindParam(":PASSWORD", $password);
 
 $stmt->execute();
 
+
+$login = "root";
+$password = "root";
+
+$stmt->execute();
+
+
+$login = "Maria";
+$password = "Maria";
+
+$stmt->execute();
+
 echo "Dados Inserido com sucesso, OK!!";
-echo "Ailton viadinho rs";kk
+
 ?>

@@ -1,6 +1,6 @@
 <?php  
 
-$conn = new PDO("sqlsrv:Database=dbphp7; server=localhost\SQLEXPRESS; ConnectionPooling=0", "sa", "123456");
+$conn = new PDO("sqlsrv:Database=dbphp7; server=localhost\SQLEXPRESS; ConnectionPooling=0", "automacao", "Brasil10");
 
 $stmt = $conn->prepare("SELECT * FROM tb_usuarios ORDER BY deslogin;");
 

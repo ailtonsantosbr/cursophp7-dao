@@ -2,7 +2,7 @@
 
 <!-- PDO::DELETE -->
 
-<?php  
+<?php
 
 $conn = new PDO("mysql:host=localhost; dbname=dbphp7", "root", "root");
 
@@ -21,7 +21,7 @@ echo "Dados Deletados OK!!";
 
 <!-- SQL SERVER -->
 
-<?php  
+<?php
 
 $conn = new PDO("sqlsrv:server=localhost; database=dbphp7", "administrador", "");
 
@@ -42,9 +42,12 @@ echo "Dados Deletados OK..";
 <!-- POSTGRESQL -->
 
 
-<?php  
+<?php
 
-$conn = new PDO("pgsql:host=$hostname; port=5432; dbname=dbphp7", $username, $password);
+$conn = new PDO("pgsql:host=$hostname; port=5
+
+
+	432; dbname=dbphp7", $username, $password);
 
 $stmt = $conn->prepare("DELETE FROM tb_usuarios WHERE idusuario = :ID");
 
@@ -54,6 +57,6 @@ $stmt->bindParam(":ID", $id);
 
 $stmt->execute();
 
-echo "Dados Deletado OK..";     
+echo "Dados Deletado OK..";
 
 ?>

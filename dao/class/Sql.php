@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 class Sql extends PDO {
 
@@ -12,19 +12,19 @@ class Sql extends PDO {
 	private function setParams($statement, $parameters = array()) {
 
 		foreach ($parameters as $key => $value) {
-			
-			$this->setParam($key, $value);
+
+			$this->setParam($statement, $key, $value);
 		}
 	}
 
 	private function setParam($statement, $key, $value){
-		
+
 		$statement->bindParam($statement, $key, $value);
 	}
 
-	public function query($rowQuery, $params = array()) {
-		
-		$stmt = $this->conn->prepare($rowQuery);
+	public function query($rawQuery, $params = array()) {
+
+		$stmt = $this->conn->prepare($rawQuery);
 
 		$this->setParams($stmt, $params);
 
@@ -33,9 +33,9 @@ class Sql extends PDO {
 		return $stmt;
 	}
 
-	public function select($rowQuery, $params = array()):array {
-		
-		$stmt = $this->query($rowQuery, $params);
+	public function select($rawQuery, $params = array()):array {
+
+		$stmt = $this->query($rawQuery, $params);
 
 		$retorno = $stmt->fetchAll(PDO::FETCH_ASSOC);
 

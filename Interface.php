@@ -1,4 +1,4 @@
-<?php  
+<?php
 
 interface veiculo {
 
@@ -44,6 +44,7 @@ class Civic implements veiculo {
 
 			case '5':
 				echo "Você esta usando a . $m";
+
 				break;
 
 			case '6':
@@ -61,10 +62,5 @@ $obj = new veiculo
 $obj->acelerar(120);
 $obj->frenar(80);
 $obj->trocarMarchar(4);
-
-
-
-
-
 
 ?>

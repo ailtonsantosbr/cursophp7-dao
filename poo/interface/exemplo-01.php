@@ -36,8 +36,8 @@ class Civic implements veiculo {
 				break;
 			case '5':
 				echo "você esta utlizando a marcha: $m";
-				break;	
-			
+				break;
+
 			default:
 				echo "Você esta utililzando marcha errada.!!";
 				break;
@@ -49,5 +49,6 @@ $obj = new veiculo();
 $obj->acelerar("120");
 $obj->frenar("81");
 $obj->trocarMarcha("3");
+print_r(expression)
 
 ?>

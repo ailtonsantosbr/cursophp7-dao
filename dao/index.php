@@ -34,7 +34,7 @@ require_once("config.php");
 
 // deletar usuario
 
-$usuario = new usuario();
+$usuario = new Usuario();
 
 $usuario->loadById(7);
 

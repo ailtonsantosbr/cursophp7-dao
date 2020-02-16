@@ -58,7 +58,7 @@ class Usuario {
 
 	public function getList() {
 		$sql = new Sql();
-		return = $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin");
+		return $sql->select("SELECT * FROM tb_usuarios ORDER BY deslogin");
 	}
 
 	public static function search($login) {
@@ -68,7 +68,6 @@ class Usuario {
 
 	public function login($login, $password){
 		$sql = new Sql();
-
 		$result = $sql->select("SELECT * FROM tb_usuarios WHERE deslogin = :LOGIN AND dessenha = :PASSWORD", array(":LOGIN"=>$login,":PASSWORD"=>$password
 		));
 
@@ -92,7 +91,7 @@ class Usuario {
 			"deslogin"=>$this->getDeslogin(),
 			"dessenha"=>$this->getDessenha(),
 			"dtcadastro"=>$this->getDtcadastro()->format("d/m/Y H:i:s")
-			));
+		));
 	}
 
 	public function query() {

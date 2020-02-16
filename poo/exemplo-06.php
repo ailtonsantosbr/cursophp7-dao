@@ -1,8 +1,10 @@
 <?php
-class Carro {
-	private $modelo;
-	private $motor;
-	private $ano;
+
+class Carro() {
+
+	public $modelo;
+	public $motor;
+	public $ano;
 
 	public function getModelo(){
 		return $this->modelo;
@@ -13,22 +15,21 @@ class Carro {
 	}
 
 	public function getMotor():float {
-		return $this->motor;
+		return $this->modelo;
 	}
 
-	public function setMotor($motor){
+	public function setMotor($motor) {
 		$this->motor = $motor;
 	}
-
 	public function getAno():int {
 		return $this->ano;
 	}
 
-	public function setAno($ano){
+	public function setAno($ano) {
 		$this->ano = $ano;
 	}
 
-	public static function exibir(){
+	public function exibir(){
 		return array(
 			"modelo"=>$this->getModelo(),
 			"motor"=>$this->getMotor(),
@@ -37,10 +38,12 @@ class Carro {
 	}
 }
 
-$gol = new Carro();
-$gol->setModelo("GOL GT");
-$gol->setMotor("1.6");
-$gol->setAno("1971");
-print_r($gol->exibir());
-?>
+$car = new Carro();
+$car->setModelo("Gol GT");
+$car->setMotor("2.0");
+$car->setAno("2008");
+print_r($car->exibir());
 
+
+
+?>

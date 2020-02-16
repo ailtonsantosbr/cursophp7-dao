@@ -14,8 +14,4 @@ foreach ($meses as $index => $mes) {
 }
 
 
-
-
-
-
 ?>

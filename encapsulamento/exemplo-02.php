@@ -1,5 +1,11 @@
 <?php
 
+/**
+* encapsulamento de variaveis com os atributos public / protected / private
+* Author: Ailton Santos
+* Date: 27/02/2020
+*/
+
 class Pessoa {
 
 	public $nome = "Rasmus Lerdoff";
@@ -27,12 +33,12 @@ class Programador extends Pessoa {
 
 class Engenheiro extends Pessoa {
 
-	echo get_class($this);
+	echo get_class($this) . "<br>";
 }
 
 class Professor extends Pessoa {
 
-	echo get_class($this);
+	echo get_class($this) . "<br>";
 }
 
 $obj = new Programador();

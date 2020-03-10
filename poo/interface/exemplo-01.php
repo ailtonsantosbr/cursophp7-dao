@@ -49,6 +49,6 @@ $obj = new veiculo();
 $obj->acelerar("120");
 $obj->frenar("81");
 $obj->trocarMarcha("3");
-print_r(expression)
+print_r($obj);
 
 ?>

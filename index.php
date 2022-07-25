@@ -34,11 +34,27 @@ echo json_encode($search);
 
 //CARREGA O USUARIO USANDO O LOGIN E PASSWORD
 
-$usuario = new Usuario();
+/**$usuario = new Usuario();
 
 $usuario->login("ailton", "reste");
 
 echo $usuario;
+**/
 
+//CRIANDO UM NOVO USUARIO INSERT
+//$aluno = new Usuario("Aluno", "@@aluno");
+
+//$aluno->setDeslogin("Mariana");
+//$aluno->setDessenha("@6547931");
+
+//$aluno->insert();
+
+//echo $aluno;
+
+$usuario = new Usuario();
+$usuario->loadById(8);
+$usuario->update("professor", "!!@@##$$%%");
+
+echo $usuario;
 
  ?>

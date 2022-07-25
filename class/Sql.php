@@ -18,7 +18,7 @@
 		}
 
 		private function setParam($statement, $key, $value){
-			$statement->bindParam($statement, $key, $value);
+			$statement->bindParam($key, $value);
 		}
 
 		public function execQuery($rawQuery, $params = array()){

@@ -51,9 +51,18 @@ echo $usuario;
 
 //echo $aluno;
 
+//ALTERAR UM USUARIO
+/**
 $usuario = new Usuario();
 $usuario->loadById(8);
 $usuario->update("professor", "!!@@##$$%%");
+
+echo $usuario;
+**/
+
+$usuario = new Usuario();
+$usuario->loadById(9);
+$usuario->delete();
 
 echo $usuario;
 

@@ -60,6 +60,8 @@ $usuario->update("professor", "!!@@##$$%%");
 echo $usuario;
 **/
 
+// deletar um registro da tabela
+
 $usuario = new Usuario();
 $usuario->loadById(9);
 $usuario->delete();

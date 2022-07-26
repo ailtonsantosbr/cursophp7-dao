@@ -67,15 +67,12 @@
 		public static function search($login){
 			$sql = new Sql();
 			return $sql->select("SELECT * FROM tb_usuarios WHERE deslogin LIKE :SEARCH ORDER BY deslogin", array(
-				':SEARCH'=> "%" . $login . "%"
-			));
+				':SEARCH'=> "%" . $login . "%"));
 		}
 
 		public function login($login, $password){
 			$sql = new Sql();
-			$results = $sql->select("SELECT * FROM tb_usuarios WHERE deslogin = :LOGIN AND dessenha = :PASSWORD", array(":LOGIN"=>$login,
-				":PASSWORD"=>$password
-			));
+			$results = $sql->select("SELECT * FROM tb_usuarios WHERE deslogin = :LOGIN AND dessenha = :PASSWORD", array(":LOGIN"=>$login,":PASSWORD"=>$password));
 
 			if (count($results) > 0) {
 				$this->setData($results[0]);
